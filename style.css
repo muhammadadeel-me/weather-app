@@ -1,0 +1,124 @@
+:root{
+  --purple: #48319d;
+  --dark: #1f1d47;
+  --pink: #c427fb;
+  --light: #e0d9ff;
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body,html{
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--light);
+}
+.container{
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #2E335A, #1C1B33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.screen{
+  width: 350px;
+  height: auto;
+  min-height: 600px; /* remove it */
+  background: url(./img/screen-bg.png) no-repeat center;
+  background-size: cover;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px #1f1d4782;
+  position: relative;
+  overflow: hidden;
+}
+.screen::before{
+  content: '';
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(./img/house.png) no-repeat center 90%;
+  background-size: contain;
+
+}
+.screen_statusbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 20px;
+}
+.screen_result{
+  padding: 50px 20px 0;
+  text-align: center;
+}
+.screen_result_area{
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.screen_result_temp{
+  font-size: 4rem;
+}
+.screen_result_desc{
+  background: #04022566;
+  display: inline-block;
+  padding: 2px 15px 5px;
+  border-radius: 30px;
+  margin-bottom: 8px;
+}
+.screen_more{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #48319d9f, #1f1d47a1);
+  padding: 40px 20px 30px;
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+
+}
+.screen_more::before{
+  content: '';
+  width: 50px;
+  height: 5px;
+  border-radius: 20px;
+  background: var(--dark);
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.screeen_more_head{
+  margin: 5px auto 10px;
+}
+.screen_more_items{
+  /* width: 100%; */
+  display: flex;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+.screen_more_items .item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgba(72, 49, 157, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.079);
+}
+.screen_more_items .item img{
+  width: 35px;
+  max-width: 35px;
+  margin: 0 auto;
+}
